@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-struct Workout {
-    let id: Int
-    let title: String
-    let image: String
-    let tintColor: Color
-    let duration: String
-    let date: String
-    let Calories: String
-}
 struct WorkoutCard: View {
     @State var workout: Workout
     
@@ -46,7 +37,7 @@ struct WorkoutCard: View {
                     
                     Spacer()
                     
-                    Text(workout.Calories)
+                    Text(workout.calories)
                 }
             }
         }
@@ -56,6 +47,6 @@ struct WorkoutCard: View {
     
 struct WorkoutCard_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutCard(workout: Workout(id: 0, title: "Running", image: "figure.run", tintColor: .cyan, duration: "43 Mins", date: "Aug 1st", Calories: "431kcal"))
+        WorkoutCard(workout: Workout(id: 0, title: "Running", image: "figure.run", tintColor: .cyan, duration: "43 Mins", date: "Aug 1st", calories: "431kcal"))
     }
 }
